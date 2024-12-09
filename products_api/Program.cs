@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
 using products_api.Entities;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -14,6 +15,17 @@ builder.Services.AddDbContext<CrudContext>(
     options => options.UseSqlServer(builder.Configuration.GetConnectionString("Connection"))
 );
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("Cors", policyBuilder =>
+    {
+        policyBuilder.AllowAnyOrigin()
+                     .AllowAnyHeader()
+                     .AllowAnyMethod();
+    });
+});
+
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -28,5 +40,7 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
+
+app.UseCors("Cors");
 
 app.Run();

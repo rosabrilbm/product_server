@@ -166,3 +166,4 @@ C:\Users\rabri\source\repos\products_api\products_api\obj\Debug\net8.0\refint\pr
 C:\Users\rabri\source\repos\products_api\products_api\obj\Debug\net8.0\products_api.pdb
 C:\Users\rabri\source\repos\products_api\products_api\obj\Debug\net8.0\products_api.genruntimeconfig.cache
 C:\Users\rabri\source\repos\products_api\products_api\obj\Debug\net8.0\ref\products_api.dll
+C:\Users\rabri\source\repos\products_api\products_api\obj\Debug\net8.0\products_api.sourcelink.json
